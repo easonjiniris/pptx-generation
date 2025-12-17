@@ -289,11 +289,11 @@ class SlideGeneratorApp:
                                font=("Arial", 10, "bold"))
         model_label.pack(anchor="w", pady=(0, 5))
 
-        model_var = tk.StringVar(value=os.getenv("MODEL_NAME", "gpt-4o-mini"))
+        model_var = tk.StringVar(value=os.getenv("MODEL_NAME", ""))
         model_dropdown = ttk.Combobox(
             main_frame,
             textvariable=model_var,
-            values=["gpt-4o-mini", "gpt-4.1-mini"],
+            values=["o4-mini", "gpt-4.1-nano", "gpt-4.1-mini", "gpt-5-nano", "gpt-5-mini", "gpt-5.1"],
             state="readonly",
             width=40
         )
